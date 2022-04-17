@@ -3,6 +3,7 @@ import React from 'react';
 const App = () => {
 
   let arr = [{Name: 'BOB'}];
+  console.log(arr);
   return (
     <div>
       {arr[0].Name}
