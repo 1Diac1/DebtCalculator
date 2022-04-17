@@ -1,11 +1,11 @@
 import React from 'react';
+import {getArr} from "./API/getArray";
 
 const App = () => {
 
-  let arr = [{Name: 'BOB'}];
+  getArr();
   return (
     <div>
-      {arr[0].Name}
       <div>
         Site working.
       </div>
