@@ -1,12 +1,17 @@
 import React from 'react';
-import {request} from "./API/fetchRequest";
 
 const App = () => {
 
-  request();
+  let arr = [{Name: 'BOB'}];
   return (
     <div>
-      Site working;
+      {arr[0].Name}
+      <div>
+        Site working.
+      </div>
+      <div>
+        Still working, I just need commit.
+      </div>
     </div>
   );
 };
