@@ -13,8 +13,11 @@ namespace DebtCalculator.Root
     {
         public static IServiceCollection AddDalServices(this IServiceCollection services, IConfiguration configuration)
         {
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+                options.UseInMemoryDatabase("Memory"));
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IDebtRepository, DebtRepository>();
