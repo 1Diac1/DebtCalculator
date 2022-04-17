@@ -9,6 +9,7 @@ namespace DebtCalculator.DAL.Data
     {
         public static async Task SeedSampleDataAsync(ApplicationDbContext context)
         {
+            // comment
             if (!await context.Debts.AnyAsync())
             {
                 await context.AddRangeAsync(
