@@ -4,6 +4,7 @@ import {getArr} from "./API/getArray";
 const App = () => {
 
   getArr();
+  console.log('11');
   return (
     <div>
       <div>
