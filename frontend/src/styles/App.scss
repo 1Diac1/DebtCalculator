@@ -1,6 +1,6 @@
 .navbar {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 15px;
@@ -9,4 +9,11 @@
 
 .navbar__links {
   margin-left: auto;
+  * {
+    padding: 5px;
+  }
+  a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+  }
 }
