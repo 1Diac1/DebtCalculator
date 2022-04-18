@@ -1,19 +1,18 @@
 import React from 'react';
-import {getArr} from "./API/getArray";
+import {getTempArray} from "./API/getTempArray";
+import {BrowserRouter} from "react-router-dom";
+import NavBar from "./components/NavBar";
+import AppRouter from "./components/AppRouter";
 
 const App = () => {
 
-  getArr();
-  console.log('11');
+  const tempArr = getTempArray();
+  console.log(tempArr);
   return (
-    <div>
-      <div>
-        Site working.
-      </div>
-      <div>
-        Still working, I just need commit.
-      </div>
-    </div>
+    <BrowserRouter>
+      <NavBar/>
+      <AppRouter/>
+    </BrowserRouter>
   );
 };
 
