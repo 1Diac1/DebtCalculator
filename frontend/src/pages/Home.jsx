@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Debts = () => {
+const Home = () => {
   return (
     <div>
 
@@ -8,4 +8,4 @@ const Debts = () => {
   );
 };
 
-export default Debts;
+export default Home;

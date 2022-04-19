@@ -2,15 +2,17 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import '../styles/App.css';
 import '../styles/normalize.css';
+import classes from '../styles/NavBar.module.css';
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <button>Выйти</button>
-      <div className="navbar__links">
-        <Link to='/about'>О сайте</Link>
-        <Link to='/debts'>Долги</Link>
-      </div>
+    <div className={classes.NavBarContainter}>
+        {/*<ul>*/}
+        {/*  <li><Link to='/home'>Домашняя</Link></li>*/}
+        {/*  <li> <Link to='/debts'>Долги</Link></li>*/}
+        {/*  <li> <Link to='/friends'>Друзья</Link></li>*/}
+        {/*  <li> <Link to='/settings'>Настройки</Link></li>*/}
+        {/*</ul>*/}
     </div>
   );
 };
