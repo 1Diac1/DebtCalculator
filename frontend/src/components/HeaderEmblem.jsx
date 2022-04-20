@@ -9,8 +9,6 @@ const HeaderEmblem = () => {
       DebtCalc.
       <span className={classes.emblem__span}>&#171;</span>
     </div>
-
-
   );
 };
 
