@@ -1,5 +1,6 @@
 
 .emblem__container {
+  grid-area: headerLeft;
   border: 1px solid cornflowerblue;
   display: flex;
   align-items: center;
@@ -24,6 +25,7 @@
 }
 
 .search__profile__containter {
+  grid-area: headerRight;
   padding: 0 30px;
   display: flex;
   align-items: center;

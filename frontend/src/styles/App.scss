@@ -9,7 +9,7 @@
 #home {
   display: grid;
   grid-template-rows: 1fr 3fr 5fr;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: minmax(180px, 1fr) 5fr;
   grid-template-areas:
     "header header"
     "nav center"
@@ -20,5 +20,7 @@
   grid-area: header;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: minmax(180px, 1fr) 5fr;
+  grid-template-areas:
+    "headerLeft headerRight"
 }

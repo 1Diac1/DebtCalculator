@@ -1,4 +1,24 @@
 .NavBarContainter {
   grid-area: nav;
   border: 1px solid purple;
+  ul {
+    list-style-type: none;
+    padding: 0 10px;
+    * {
+      margin-top: 10px;
+    }
+  }
+  a, a:hover, a:visited, a:active {
+    color: #787486;
+    text-decoration: none;
+  }
 }
+
+
+li {
+  display: flex;
+  * {
+    padding: 0 5px;
+  }
+}
+

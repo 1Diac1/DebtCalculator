@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from "../components/NavBar";
 import MainBodyDebts from "../components/MainBodyDebts";
-import MyProjects from "../components/MyProjects";
+import DebtGroups from "../components/DebtGroups";
 import '../styles/App.css';
 import FullHeader from "../components/FullHeader";
 
@@ -12,7 +12,7 @@ const Home = () => {
       <FullHeader/>
       <NavBar/>
       <MainBodyDebts/>
-      <MyProjects/>
+      <DebtGroups/>
     </div>
   );
 };
