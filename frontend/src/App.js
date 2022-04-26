@@ -5,8 +5,6 @@ import AppRouter from "./components/AppRouter";
 
 const App = () => {
 
-  const tempArr = getTempArray();
-  console.log(tempArr);
   return (
       <BrowserRouter>
         <AppRouter/>

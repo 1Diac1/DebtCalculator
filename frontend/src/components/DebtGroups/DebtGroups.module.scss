@@ -1,0 +1,54 @@
+.debtGroupsContainter {
+  grid-area: debtgroups;
+  border: 0.5px solid #DBDBDB;
+  overflow: auto;
+  color: #787486;
+  ul {
+    padding: 0 10px;
+    list-style: none;
+    li {
+      span {
+        margin-bottom: 3px;
+      }
+    }
+    * {
+      margin-bottom: 3px;
+      padding: 0 10px 0 0;
+      margin-left: 5px;
+    }
+  }
+}
+
+.nameAndModal {
+  padding-left: 22px;
+  padding-top: 30.5px;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  img {
+    padding-right: 25.5px;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+  span {
+    font-size: 12px;
+  }
+}
+
+.liElem {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.liElem:hover {
+   background-color: rgba(80, 48, 229, 0.08);
+   cursor: pointer;
+ }
+
+.liElemActive {
+  background-color: rgba(80, 48, 229, 0.08);
+}

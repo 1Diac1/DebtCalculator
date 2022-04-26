@@ -1,0 +1,64 @@
+.mainBodyContainer {
+  border: 0.5px solid #DBDBDB;
+  grid-area: center;
+}
+
+.debtGroup {
+  display: flex;
+  padding: 20px 30px;
+  gap: 5px;
+}
+
+.debtGroupName {
+  font-size: 46px;
+  font-weight: 500;
+  padding: 0 10px;
+}
+
+.debtGroupImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  img {
+    cursor: pointer;
+  }
+}
+
+.debtsList {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 15px;
+}
+
+.debtElem {
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #DBDBDB;
+  transition: transform .2s;
+}
+
+.debtElem:hover {
+  background-color: #DBDBDB;
+  transform: scale(1.02);
+}
+
+.debtHeader {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.debtDescription {
+  color: #787486;
+  display: flex;
+  span {
+    margin-left: auto;
+  }
+}
+
+.ModalDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 15px;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import FullHeader from "../components/FullHeader";
+import FullHeader from "../components/FullHeader/FullHeader";
 
 
 const Debts = () => {

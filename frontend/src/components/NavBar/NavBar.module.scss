@@ -1,11 +1,11 @@
 .NavBarContainter {
   grid-area: nav;
-  border: 1px solid purple;
+  border: 0.5px solid #DBDBDB;
   ul {
     list-style-type: none;
-    padding: 0 10px;
+    padding: 0 22px;
     * {
-      margin-top: 10px;
+      margin-top: 12px;
     }
   }
   a, a:hover, a:visited, a:active {

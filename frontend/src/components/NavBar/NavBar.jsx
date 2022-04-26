@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import '../styles/App.css';
-import '../styles/normalize.css';
-import classes from '../styles/NavBar.module.css';
-import homeImg from '../img/navbar/category.svg';
-import settings from '../img/navbar/setting-2.svg';
-import profileUser from '../img/navbar/profile-2user.svg';
-import taskSquare from '../img/navbar/task-square.svg';
+import '../../styles/App.css';
+import '../../styles/normalize.css';
+import classes from './NavBar.module.css';
+import homeImg from '../../img/navbar/category.svg';
+import settings from '../../img/navbar/setting-2.svg';
+import profileUser from '../../img/navbar/profile-2user.svg';
+import taskSquare from '../../img/navbar/task-square.svg';
 
 const NavBar = () => {
   return (

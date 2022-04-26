@@ -1,11 +1,11 @@
 import React from 'react';
-import classes from '../styles/Header.module.css';
-import searchNormal from '../img/search-normal.svg';
-import calendar from '../img/calendar-2.svg';
-import messageQuestion from '../img/message-question.svg';
-import notification from '../img/notification.svg';
-import profilePic from '../img/profilePic.svg';
-import arrowDown from '../img/arrow-down.svg';
+import classes from './Header.module.css';
+import searchNormal from '../../img/search-normal.svg';
+import calendar from '../../img/calendar-2.svg';
+import messageQuestion from '../../img/message-question.svg';
+import notification from '../../img/notification.svg';
+import profilePic from '../../img/profilePic.svg';
+import arrowDown from '../../img/arrow-down.svg';
 
 const HeaderRightPart = () => {
   return (

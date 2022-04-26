@@ -8,19 +8,19 @@
 
 #home {
   display: grid;
-  grid-template-rows: 1fr 3fr 5fr;
-  grid-template-columns: minmax(180px, 1fr) 5fr;
+  grid-template-rows: 1fr 3fr 500px;
+  grid-template-columns: minmax(250px, 1fr) 5fr;
   grid-template-areas:
     "header header"
     "nav center"
-    "myprojects center";
+    "debtgroups center";
 }
 
 .fullHeader {
   grid-area: header;
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: minmax(180px, 1fr) 5fr;
+  grid-template-columns: minmax(250px, 1fr) 5fr;
   grid-template-areas:
     "headerLeft headerRight"
 }
