@@ -26,7 +26,7 @@ namespace DebtCalculator.Api
                     //if (context.Database.IsSqlServer())
                     //    context.Database.Migrate();
 
-                    context.Database.EnsureCreated();
+                    //context.Database.EnsureCreated();
 
                     await ApplicationDbContextSeed.SeedSampleDataAsync(context);
                 }

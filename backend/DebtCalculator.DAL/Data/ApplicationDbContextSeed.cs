@@ -58,9 +58,9 @@ namespace DebtCalculator.DAL.Data
                         Age = 16
                     }
                 );
-
-                await context.SaveChangesAsync();
             }
+            
+            await context.SaveChangesAsync();
         }
     }
 }

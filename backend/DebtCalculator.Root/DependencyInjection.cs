@@ -1,4 +1,5 @@
-﻿using DebtCalculator.DAL.Repositories.Implementation;
+﻿using System;
+using DebtCalculator.DAL.Repositories.Implementation;
 using DebtCalculator.BLL.Services.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
@@ -13,11 +14,8 @@ namespace DebtCalculator.Root
     {
         public static IServiceCollection AddDalServices(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("Memory"));
+                options.UseSqlite("Filename=Debt.db"));
 
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IDebtRepository, DebtRepository>();

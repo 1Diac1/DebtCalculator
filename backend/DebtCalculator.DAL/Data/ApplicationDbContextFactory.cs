@@ -7,7 +7,7 @@ namespace DebtCalculator.DAL.Data
         public ApplicationDbContext CreateDbContext()
         {
             var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-            optionsBuilder.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=debts;Trusted_Connection=True;");
+            optionsBuilder.UseSqlite("Filename=Debts.db");
 
             return new ApplicationDbContext(optionsBuilder.Options);
         }
