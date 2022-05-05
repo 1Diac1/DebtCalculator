@@ -3,11 +3,13 @@ using DebtCalculator.Api.Requests;
 using DebtCalculator.Core.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DebtCalculator.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class DebtController : ControllerBase
     {
         private readonly IDebtService _debtService;

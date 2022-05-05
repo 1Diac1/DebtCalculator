@@ -28,7 +28,7 @@ namespace DebtCalculator.Api
 
                     //context.Database.EnsureCreated();
 
-                    await ApplicationDbContextSeed.SeedSampleDataAsync(context);
+                    //await ApplicationDbContextSeed.SeedSampleDataAsync(context);
                 }
                 catch (Exception ex)
                 {
