@@ -41,7 +41,7 @@ namespace DebtCalculator.BLL.Services.Implementation
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, username),
-                new Claim(JwtRegisteredClaimNames.Jti, role)
+                new Claim(JwtRegisteredClaimNames.Jti, "User")
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, "Token",

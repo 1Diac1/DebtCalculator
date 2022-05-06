@@ -71,9 +71,7 @@ namespace DebtCalculator.Api.Controllers
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 UserName = request.UserName,
-                Email = request.Email,
-                Role = request.Role,
-                Age = request.Age
+                Email = request.Email
             };
 
             var result = await _userManager.CreateAsync(newUser, request.Password);

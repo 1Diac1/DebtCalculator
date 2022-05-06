@@ -6,6 +6,6 @@
     "\\backend\\DebtCalculator.DAL\\Data",
     "\\backend\\DebtCalculator.Root"
   ],
-  "SelectedNode": "\\backend\\DebtCalculator.sln",
+  "SelectedNode": "\\backend\\DebtCalculator.Root\\DependencyInjection.cs",
   "PreviewInSolutionExplorer": false
 }
