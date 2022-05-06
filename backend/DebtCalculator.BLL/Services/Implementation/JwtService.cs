@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DebtCalculator.Core.Options;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace DebtCalculator.BLL.Services.Implementation
 {
@@ -39,12 +40,12 @@ namespace DebtCalculator.BLL.Services.Implementation
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, username),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, role)
+                new Claim(JwtRegisteredClaimNames.Sub, username),
+                new Claim(JwtRegisteredClaimNames.Jti, role)
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, "Token",
-                ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
+                JwtRegisteredClaimNames.Sub, ClaimTypes.Role);
 
             return claimsIdentity;
         }

@@ -4,6 +4,6 @@ namespace DebtCalculator.BLL.Services
 {
     public interface IJwtService
     {
-        Task<string> GetTokenAsync(string username, string password);
+        Task<string> GetTokenAsync(string username, string role);
     }
 }
