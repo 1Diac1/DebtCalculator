@@ -22,7 +22,7 @@ namespace DebtCalculator.Api
             services.AddBllServices(Configuration);
 
             services.AddCors(options =>
-                options.AddPolicy("MyPolicy2", builder =>
+                options.AddPolicy("MyPolicy", builder =>
                 {
                     builder.AllowAnyMethod();
                     builder.AllowAnyHeader();
@@ -44,7 +44,7 @@ namespace DebtCalculator.Api
             app.UseAuthentication();
             app.UseAuthorization();
             
-            app.UseCors("MyPolicy2");
+            app.UseCors("MyPolicy");
 
             app.UseEndpoints(endpoints =>
             {
