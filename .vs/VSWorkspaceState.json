@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\DebtCalculator.DAL",
+    "\\backend\\DebtCalculator.DAL\\Data",
+    "\\backend\\DebtCalculator.Root"
+  ],
+  "SelectedNode": "\\backend\\DebtCalculator.sln",
+  "PreviewInSolutionExplorer": false
+}
