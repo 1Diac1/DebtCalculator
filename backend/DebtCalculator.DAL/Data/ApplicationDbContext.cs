@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using DebtCalculator.Core.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace DebtCalculator.DAL.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<User, IdentityRole<int>, int>
     {
         public DbSet<Debt> Debts { get; set; }
-        public DbSet<User> Users { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -25,7 +26,7 @@ namespace DebtCalculator.DAL.Data
                         LastName = "Ruslanov",
                         Age = 16
                     });
-
+            
             modelBuilder.Entity<User>()
                 .HasData(new User
                 {

@@ -3,9 +3,12 @@ using DebtCalculator.BLL.Services.Implementation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using DebtCalculator.DAL.Repositories;
+using DebtCalculator.Root.Installers;
 using Microsoft.EntityFrameworkCore;
 using DebtCalculator.BLL.Services;
+using DebtCalculator.Core.Models;
 using DebtCalculator.DAL.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace DebtCalculator.Root
 {
@@ -13,12 +16,16 @@ namespace DebtCalculator.Root
     {
         public static IServiceCollection AddDalServices(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddDbContext<ApplicationDbContext>(options =>
-            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseInMemoryDatabase("Memory"));
+                options.UseSqlite("Filename=Debt.db"));
 
+            services.AddJwtInstaller(configuration);
+
+            services.AddIdentity<User, IdentityRole<int>>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+            
+            services.AddScoped<IJwtService, JwtService>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IDebtRepository, DebtRepository>();
 

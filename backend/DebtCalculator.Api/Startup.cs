@@ -41,6 +41,9 @@ namespace DebtCalculator.Api
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+            
             app.UseCors("MyPolicy2");
 
             app.UseEndpoints(endpoints =>
