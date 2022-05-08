@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using DebtCalculator.Core.Models;
 using DebtCalculator.Core.Options;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -19,9 +20,9 @@ namespace DebtCalculator.BLL.Services.Implementation
             _authOptions = authOptions.Value;
         }
 
-        public async Task<string> GetTokenAsync(string username, string role)
+        public async Task<string> GetTokenAsync(User user)
         {
-            var identity = await Task.Factory.StartNew(() => GetIdentity(username, role));
+            var identity = await Task.Factory.StartNew(() => GetIdentity(user));
             
             var jwt = new JwtSecurityToken(
                 issuer: _authOptions.Issuer,
@@ -36,16 +37,18 @@ namespace DebtCalculator.BLL.Services.Implementation
             return encodedJwt;
         }
 
-        private ClaimsIdentity GetIdentity(string username, string role)
+        private ClaimsIdentity GetIdentity(User user)
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Sub, username),
-                new Claim(JwtRegisteredClaimNames.Jti, "User")
+                new Claim("username", user.UserName),
+                new Claim("first_name",  user.FirstName),
+                new Claim("last_name", user.LastName),
+                new Claim("role", "User")
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, "Token",
-                JwtRegisteredClaimNames.Sub, ClaimTypes.Role);
+                "username", "role");
 
             return claimsIdentity;
         }

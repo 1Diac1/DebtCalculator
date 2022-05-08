@@ -48,7 +48,7 @@ namespace DebtCalculator.Api.Controllers
             if (checkPassword is false)
                 return new BadRequestObjectResult("Login or password invalid.");
 
-            var response = await _jwtService.GetTokenAsync(user.UserName, user.Role);
+            var response = await _jwtService.GetTokenAsync(user);
 
             return Ok(new { Token = response });
         }
@@ -79,7 +79,7 @@ namespace DebtCalculator.Api.Controllers
             if (result.Succeeded is false)
                 return new BadRequestObjectResult(result.Errors.Select(e => e.Description));
             
-            var response = await _jwtService.GetTokenAsync(newUser.UserName, newUser.Role);
+            var response = await _jwtService.GetTokenAsync(newUser);
 
             return Ok(new { Token = response });
         }
