@@ -11,5 +11,11 @@
             public const string Login = Base + "/auth/login";
             public const string Register = Base + "/auth/signup";
         }
+
+        public static class Debt
+        {
+            public const string GetAllFromUser = Base + "/debts/get-all-from-user";
+            public const string Add = Base + "/debts/add";
+        }
     }
 }

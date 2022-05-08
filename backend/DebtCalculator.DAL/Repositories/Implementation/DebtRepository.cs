@@ -18,7 +18,20 @@ namespace DebtCalculator.DAL.Repositories.Implementation
 
         public async Task<IEnumerable<Debt>> GetAllFromUserIdAsync(int userId)
         {
-            var debts = await _context.Debts.Where(d => d.UserId == userId).ToListAsync();
+            var debts = await _context.Debts
+                .Where(d => d.UserId == userId)
+                .ToListAsync();
+
+            return debts;
+        }
+
+        public async Task<IEnumerable<Debt>> GetAllFromUserName(string username)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == username);
+            
+            var debts = await _context.Debts
+                .Where(d => d.UserId == user.Id)
+                .ToListAsync();
 
             return debts;
         }

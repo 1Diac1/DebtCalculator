@@ -1,4 +1,5 @@
-﻿using DebtCalculator.Core.Options;
+﻿using System.Text;
+using DebtCalculator.Core.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +13,7 @@ namespace DebtCalculator.Root.Installers
         {
             services.Configure<AuthOptions>(configuration.GetSection("AuthOptions"));
             var authOptions = new AuthOptions();
-            configuration.Bind(authOptions);
+            configuration.Bind("AuthOptions", authOptions);
             
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -25,7 +26,7 @@ namespace DebtCalculator.Root.Installers
                         ValidateAudience = true,
                         ValidAudience = authOptions.Audience,
                         ValidateLifetime = true,
-                        IssuerSigningKey = authOptions.GetSymmetricSecurityKey(),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(authOptions.Key)),
                         ValidateIssuerSigningKey = true
                     };
                 });
