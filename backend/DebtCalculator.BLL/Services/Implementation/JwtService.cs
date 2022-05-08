@@ -41,9 +41,9 @@ namespace DebtCalculator.BLL.Services.Implementation
         {
             var claims = new List<Claim>
             {
-                new Claim("username", user.UserName),
-                new Claim("first_name",  user.FirstName),
-                new Claim("last_name", user.LastName),
+                new Claim("userName", user.UserName),
+                new Claim("firstName",  user.FirstName),
+                new Claim("lastName", user.LastName),
                 new Claim("role", "User")
             };
 
