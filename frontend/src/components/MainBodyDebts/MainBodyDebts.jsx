@@ -32,6 +32,7 @@ const MainBodyDebts = () => {
       <div className={classes.debtsList}>
         {arrOfDebts.map((elem, index) =>
           <MainBodyDebtPost
+            key={index}
             elem={elem}
             index={index}
           />

@@ -10,7 +10,6 @@ const DebtGroups = () => {
 
   const dispatch = useDispatch();
   const debtGroupArrRedux = useSelector(state => state.debtGroups);
-  console.log(debtGroupArrRedux);
 
   const [debtGroup, setDebtGroup] = useState(debtGroupArrRedux);
   const [visible, setVisible] = useState(false);

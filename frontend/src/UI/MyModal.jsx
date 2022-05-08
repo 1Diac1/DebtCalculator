@@ -10,8 +10,8 @@ const MyModal = ({children, visible, setVisible}) => {
   }
 
   return (
-    <div className={rootClasses.join(" ")} onClick={() => setVisible(false)}>
-      <div className={classes.myModalContent} onClick={(e) => e.stopPropagation()}>
+    <div className={rootClasses.join(" ")} onMouseDown={() => setVisible(false)}>
+      <div className={classes.myModalContent} onMouseDown={(e) => e.stopPropagation()}>
         {children}
       </div>
     </div>
