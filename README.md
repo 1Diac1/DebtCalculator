@@ -20,3 +20,5 @@
 5. GIT
 
 Проект не реализован до конца.
+
+![image](https://user-images.githubusercontent.com/91781655/178341342-d6347e48-93f9-4a96-8165-69deeb8f21b4.png)
